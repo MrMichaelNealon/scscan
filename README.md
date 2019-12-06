@@ -9,7 +9,7 @@ I need to spend a bit of time documenting the available command-line options, an
 
 ## Basic operation
 
-We can scan lists or ranges of host IP addressed, first, if we want to scan a list of hosts (we can use domans or IP addresses:
+We can scan lists or ranges of host IP addresses. First, if we want to scan a list of hosts (we can use domans or IP addresses:
 
 ```
 	scscan --host www.google.com --host www.youtube.com
@@ -43,7 +43,7 @@ Both host and port lists/ranges can be inverted. For example, if we want to scan
 	scscan --host 1.2.3.4 -invert-hosts
 ```
 
-And similarly, we can use the -invert-ports to scan all ports except:
+And similarly, we can use the -invert-ports switch to scan all ports except:
 
 ```
 	scscan --host 1.2.3.4 --port 25 --port 80 -invert-ports
@@ -71,12 +71,12 @@ Both of the above options allow you to specify a filename beginning with the + c
 
 ## Wrap up
 
-I wrote a few different versions of this, this I think was the most robust with the built-in range scanning functionality. In retrospect it's nice, but not perfect. I'd like to rewrite this and possible introduce some new, more advanced scanning methods - half open, etc.
+I wrote a few different versions of this. I think this was the most robust version with the built-in range scanning functionality - interacting with the ports DB to show service names and so on. In retrospect it's nice, but not perfect. I'd like to rewrite this and possibly introduce some new, more advanced scanning methods - half open, etc.
 
 We shall see! I have other gigs on the go so this isn't a priority but it was fun to write.
 
 
-Hopefully someone finds it useful or can learn something from the (not ideal) code.
+Hopefully someone finds it useful or can learn something from the (not perfect) code.
 
 
 Michael.
